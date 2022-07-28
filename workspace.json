@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "--component-library": "libs/component-library",
     "nextjs-training": "apps/nextjs-training",
     "nextjs-training-e2e": "apps/nextjs-training-e2e"
   }
