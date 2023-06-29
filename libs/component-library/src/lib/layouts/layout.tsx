@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Header } from "../header/header";
 import { ReactNode } from "react";
+import { Footer } from "../footer/footer";
 
 type Props = {
   children: ReactNode;
@@ -11,7 +12,7 @@ export const Layout = ({ children }: Props) => {
     <StyledLayout>
       <Header />
       {children}
-      {/* </Footer /> */}
+      <Footer />
     </StyledLayout>
   )
 }
