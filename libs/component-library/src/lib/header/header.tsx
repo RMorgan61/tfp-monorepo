@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useDispatch, useSelector } from "react-redux";
 import { selectAuthState, setAuthState } from '../store/authSlice';
+import { Button } from '../button/button';
 
 export const Header = () => {
   const authState = useSelector(selectAuthState);
@@ -14,10 +15,10 @@ export const Header = () => {
           {authState ? (
             <>
               <Username>Hello Username</Username>
-              <button onClick={() => dispatch(setAuthState(false))}>Log Out</button>
+              <Button variant='header' text="Log Out" onClick={() => dispatch(setAuthState(false))} />
             </>
           ) : (
-            <button onClick={() => dispatch(setAuthState(true))}>Log In</button>
+            <Button variant='header' text="Log In" onClick={() => dispatch(setAuthState(true))} />
           )}
         </LoggedInOut>
       </InnerHeader>
